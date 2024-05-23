@@ -8,4 +8,13 @@ function makfunc() {
 
 var myfunc = makfunc();
 
-myfunc();
+function createBase(num) {
+  return function (innerNum) {
+    console.log(innerNum + num);
+  };
+}
+
+let addSix = createBase(6);
+
+addSix(10);
+addSix(21);
